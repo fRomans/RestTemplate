@@ -60,6 +60,7 @@ public class RestTemplateApplication {
         HttpEntity<User> requestEntityDelete = new HttpEntity<>(deleteUser, headers);
         HttpEntity<String> responseDelete = restTemplate.exchange(URL+"/"+deleteUser.getId(), HttpMethod.DELETE, requestEntityDelete, String.class);
         magicCode.append(responseDelete.getBody());
+        
         System.out.println(magicCode);
 
 
